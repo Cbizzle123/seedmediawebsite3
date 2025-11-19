@@ -16,44 +16,30 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-      if (!supabaseUrl || !supabaseAnonKey) {
-        throw new Error('Supabase configuration is missing. Please check your environment variables.');
-      }
-
-      const apiUrl = `${supabaseUrl}/functions/v1/submit-contact`;
-
-      const response = await fetch(apiUrl, {
+      // Using Web3Forms - free service, no backend needed
+      const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || 'YOUR_WEB3FORMS_ACCESS_KEY';
+      
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${supabaseAnonKey}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          access_key: accessKey,
+          subject: `New Contact Form Submission from ${formData.name}`,
+          from_name: formData.name,
+          from_email: formData.email,
           name: formData.name,
           email: formData.email,
-          company: formData.company || '',
-          message: formData.message
+          company: formData.company || 'Not provided',
+          message: formData.message,
         }),
       });
 
-      // Check if response is JSON before parsing
-      const contentType = response.headers.get('content-type');
-      let result;
-      
-      if (contentType && contentType.includes('application/json')) {
-        result = await response.json();
-      } else {
-        // If not JSON, read as text to see what we got
-        const text = await response.text();
-        console.error('Non-JSON response:', text);
-        throw new Error(`Server returned an invalid response. Please check your Supabase configuration.`);
-      }
+      const result = await response.json();
 
-      if (!response.ok) {
-        throw new Error(result.error || result.message || 'Failed to send message');
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Failed to send message');
       }
 
       setIsSubmitted(true);
