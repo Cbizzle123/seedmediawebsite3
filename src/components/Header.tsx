@@ -15,7 +15,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Our Work', href: '/portfolio' },
+    { name: 'My Work', href: '/portfolio' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '#', onClick: () => {
       if (window.voiceflow && window.voiceflow.chat) {
