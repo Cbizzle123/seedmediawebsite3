@@ -35,8 +35,7 @@ const Hero = () => {
           
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-medium text-shadow px-2">
-             AI shouldn’t replace people.
-It should replace repetitive admin.
+             Less manual work. Faster responses. Fewer mistakes.
           </p>
           
           {/* CTA Buttons */}
