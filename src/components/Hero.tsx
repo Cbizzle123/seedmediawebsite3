@@ -35,7 +35,8 @@ const Hero = () => {
           
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-medium text-shadow px-2">
-            'Stop AI! It will take our jobs!' You mean filling in our spreadsheets? Updating our CRM? Dealing with our most common customer queries instantly? Sounds good to me! 
+             AI shouldn’t replace people.
+It should replace repetitive admin.
           </p>
           
           {/* CTA Buttons */}
