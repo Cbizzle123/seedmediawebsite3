@@ -4,10 +4,10 @@ import { Bot, Globe, Workflow } from 'lucide-react';
 const Services = () => {
   const services = [
     {
-      icon: Bot,
-      title: 'AI Customer Service',
-      description: 'Intelligent AI-powered customer service solutions that handle inquiries 24/7 across chat and phone, improving response times and customer satisfaction.',
-      features: ['AI Chatbots', 'AI Phone Agents', 'Multi-platform Integration', 'Natural Language Processing']
+      icon: Workflow,
+      title: 'Workflow Automation & Outreach',
+      description: 'Streamline repetitive tasks, optimize business processes, and automate outreach campaigns to save time and scale efficiently.',
+      features: ['Process Automation', 'Email Outreach', 'Lead Nurturing', 'Integration Setup']
     },
     {
       icon: Globe,
@@ -16,10 +16,10 @@ const Services = () => {
       features: ['Custom Website Design', 'SEO Optimization', 'GEO Optimization', 'Ongoing Maintenance']
     },
     {
-      icon: Workflow,
-      title: 'Workflow Automation & Outreach',
-      description: 'Streamline repetitive tasks, optimize business processes, and automate outreach campaigns to save time and scale efficiently.',
-      features: ['Process Automation', 'Email Outreach', 'Lead Nurturing', 'Integration Setup']
+      icon: Bot,
+      title: 'AI Customer Service',
+      description: 'Intelligent AI-powered customer service solutions that handle inquiries 24/7 across chat and phone, improving response times and customer satisfaction.',
+      features: ['AI Chatbots', 'AI Phone Agents', 'Multi-platform Integration', 'Natural Language Processing']
     }
   ];
 
