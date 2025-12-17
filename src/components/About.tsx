@@ -50,7 +50,7 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-green-600 rounded-full"></div>
-                  <span className="text-gray-700">AI-First Approach</span>
+                  <span className="text-gray-700">Technology First Approach</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-green-600 rounded-full"></div>
