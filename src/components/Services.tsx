@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot, Globe, Workflow, Share2 } from 'lucide-react';
+import { Bot, Globe, Workflow } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -20,12 +20,6 @@ const Services = () => {
       title: 'Workflow Automation & Outreach',
       description: 'Streamline repetitive tasks, optimize business processes, and automate outreach campaigns to save time and scale efficiently.',
       features: ['Process Automation', 'Email Outreach', 'Lead Nurturing', 'Integration Setup']
-    },
-    {
-      icon: Share2,
-      title: 'Digital Marketing',
-      description: 'Comprehensive digital marketing strategies including social media management, content creation, and campaign optimization.',
-      features: ['Social Media Management', 'Content Creation', 'Campaign Strategy', 'Analytics & Reporting']
     }
   ];
 
